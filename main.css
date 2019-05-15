@@ -1,0 +1,130 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+/*.header{
+    background: url('https://images.unsplash.com/photo-1518176258769-f227c798150e') center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+.header > nav{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    padding: 1rem 4rem;
+}
+
+.header > nav > ul{
+    list-style: none;
+    display: grid;
+    
+    align-items: center;
+   
+    grid-template-columns: repeat(auto-fit,minmax(145px,1fr));
+    padding-left: 0;
+    
+}
+
+.header > nav > ul > li > a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.header > nav > ul > li > a:hover{
+    color: blueviolet;
+    
+}
+*/
+.nav-container {
+    width: 100%;
+    background: url('https://images.unsplash.com/photo-1518176258769-f227c798150e') center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+nav {
+    max-width: 1720px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.logo {
+    grid-column: 1;
+}
+
+#nav-toggle, .burger-menu {
+    display: none;
+}
+ 
+@media only screen and (max-width: 720px) {
+    .burger-menu {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 1rem;
+        color: white;
+    }
+
+    .left-menu {
+        display: none !important;
+    }
+
+    #nav-toggle:checked ~ .left-menu {
+        display: grid !important;
+        grid-row: 2;
+        justify-content: flex-end;
+        padding-right: 1rem;
+        text-align: right;
+    }
+}                
+     
+nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+
+.left-menu a {
+    padding: 10px 0;
+    margin-left: 15px;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.logo {
+    font-size: 40px;
+    padding: 1rem;
+}
+
+.left-menu {
+    grid-column: 2;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.burger-menu {
+    grid-column: 2;
+    align-self: center;
+    margin-left: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    
+    transition: .3s all ease-in-out;
+}
+
+nav a:hover {
+    opacity: .7;
+}
+       
